@@ -51,7 +51,7 @@ def main():
 	param_names = generate_parameters(paths["project"], w, beta, D, mu)
 
 	print "Copying YAML file..."
-	os.system("cp specification_sheet.YAML "+paths["project"])
+	os.system("cp specification_sheet.yaml "+paths["project"])
 
 	print "Passing to PCSF_param_sweep.sh..."
 	CMD = "sh PCSF_param_sweep.sh %s %s %s %s %s %s %s" %(paths["python"], paths["forest"], paths["terminals"], \

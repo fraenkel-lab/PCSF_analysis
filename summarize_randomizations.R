@@ -5,12 +5,13 @@
 
 # Script that summarizes all the scores across randomizations
 library("data.table")
-# library("tidyr")
 library("dplyr")
 library("stringr")
+library("yaml")
 
-args <- commandArgs(trailingOnly = TRUE)
-TF <- args[1]
+# load project path
+x<-yaml.load_file("specification_sheet.yaml")
+TF<-x["projectPath"]
 
 
 ######################
