@@ -23,7 +23,7 @@ D:      7
 mu:     1e-05
 ```
 
-## Parameter search
+## Pipeline
 Run `forest.py` for all parameter sets, with optional parameter for specifying the yaml file:  
     ```python run_PCSF_param_sweep.py [yaml_file]```
     
