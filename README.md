@@ -10,11 +10,11 @@
 ```yaml
 msgPath:        /nfs/apps/bin/msgsteiner9
 pythPath:       /nfs/apps/python2.7/bin/python
-forestPath:     /nfs/latdata/iamjli/alex/PCSF_analysis/bin/forest.py
+forestPath:     /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/bin/forest.py
 
-projectPath:    /nfs/latdata/iamjli/alex/results/human_uniform_weights/
-terminals:      /nfs/latdata/iamjli/alex/data/toxicity_screen_human_uniform_prizes.tsv
-interactome:    /nfs/latdata/iamjli/alex/data/interactome/iRefIndex_v13_MIScore_interactome.txt
+projectPath:    /nfs/latdata/iamjli/alexanders_disease/results/human_uniform_weights/
+terminals:      /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/toxicity_screen_human_uniform_prizes.tsv
+interactome:    /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/iRefIndex_v13_MIScore_interactome.txt
 
 # Parameter grid
 w:      1,2,3
