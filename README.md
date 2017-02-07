@@ -26,16 +26,16 @@ mu:     1e-05
 ## Pipeline
 Run `forest.py` for all parameter sets, with optional parameter for specifying the yaml file:
 
-    ```python run_PCSF_param_sweep.py [yaml_file]```
+    python run_PCSF_param_sweep.py [yaml_file]
     
 Run summarization scripts and visualize parameter grid results:  
 
-    ```python PCSF_param_selection.py [yaml_file]```
+    python PCSF_param_selection.py [yaml_file]
     
 This also restructures the project directory. Results found in `param_search/summary/`. Choose best looking parameter set, and run randomization scripts:  
 
-    ```python run_PCSF_randomizations.py W_3_BETA_3_D_7_mu_1e-05 [yaml_file]``` 
+    python run_PCSF_randomizations.py W_3_BETA_3_D_7_mu_1e-05 [yaml_file] 
     
 Finally, summarize randomization results:  
 
-    ```Rscript summarize_randomizations.R <project_path>```
+    Rscript summarize_randomizations.R <project_path>
