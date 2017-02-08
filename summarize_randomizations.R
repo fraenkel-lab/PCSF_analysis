@@ -21,10 +21,10 @@ TF<-as.character(x["projectPath"])
 sources.files <- list.files(path = TF, recursive = T, pattern = "*_randomTerminals_nodeattributes.tsv", 
     full.names = T)
 
+sources.files
+
 final.mat <- data.frame()
 for (i in 1:length(sources.files)) {
-    print(i)
-    print(sources.files[i])
     current.file <- sources.files[i]
     # current.file<-sources.files[2]
     dat <- fread(current.file, data.table = F, header = T)
@@ -63,8 +63,6 @@ sources.files <- list.files(path = TF, recursive = T, pattern = "*_noisy_nodeatt
 
 final.mat <- data.frame()
 for (i in 1:length(sources.files)) {
-    print(i)
-    print(sources.files[i])
     current.file <- sources.files[i]
     # current.file<-sources.files[2]
     dat <- fread(current.file, data.table = F, header = T)
@@ -102,9 +100,7 @@ sources.files <- list.files(path = TF, recursive = T, pattern = "*_noisy_edgeatt
     full.names = T)
 
 final.mat <- data.frame()
-for (i in 1:length(sources.files)) {
-    
-    print(sources.files[i])
+for (i in 1:length(sources.files)) { 
     current.file <- sources.files[i]
     # current.file<-sources.files[2]
     dat <- fread(current.file, data.table = F, header = T)

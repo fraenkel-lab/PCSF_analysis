@@ -54,7 +54,7 @@ def main():
 	os.system("cp specification_sheet.yaml "+paths["project"])
 
 	print "Passing to PCSF_param_sweep.sh..."
-	CMD = "sh PCSF_param_sweep.sh %s %s %s %s %s %s %s" %(paths["python"], paths["forest"], paths["terminals"], \
+	CMD = "sh bin/PCSF_param_sweep.sh %s %s %s %s %s %s %s" %(paths["python"], paths["forest"], paths["terminals"], \
 			paths["interactome"], paths["project"], paths["msg"], paths["label"])
 	print CMD
 	os.system(CMD)

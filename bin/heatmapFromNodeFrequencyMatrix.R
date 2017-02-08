@@ -55,28 +55,28 @@ if (length(params) >= 1) {
     if (!colorSubgroups) {
         heatmap.2((x > 0) * 1, main = "All Nodes across Networks", hclustfun = clustfun, RowSideColors = rsColors, 
             trace = "none", scale = "none", col = c("white", "black"), margins = plotMargins, 
-            key = F, sub = matrPath, srtCol = 40)
+            key = F, srtCol = 40)
         legend("topright", legend = c("Steiner Node", "Terminal Node"), col = c("hotpink", "gray"), 
             lty = 1, lwd = 10, cex = 0.8)
         heatmap.2(x, main = "All Nodes across Networks (color is degree)", hclustfun = clustfun, 
             RowSideColors = rsColors, trace = "none", scale = "none", col = c("white", rev(heat.colors(max(x) + 
-                2))), margins = plotMargins, key = T, sub = matrPath, srtCol = 40, keysize = 1)
+                2))), margins = plotMargins, key = T, srtCol = 40, keysize = 1)
         legend("topright", legend = c("Steiner Node", "Terminal Node"), col = c("hotpink", "gray"), 
             lty = 1, lwd = 10, cex = 0.8)
         
         heatmap.2((x[isTerm, ] > 0) * 1, main = "Terminal Nodes across Networks", hclustfun = clustfun, 
             trace = "none", scale = "none", col = c("white", "black"), margins = plotMargins, 
-            key = F, sub = matrPath, srtCol = 40)
+            key = F, srtCol = 40)
         heatmap.2(x[isTerm, ], main = "Terminal Nodes across Networks (color is degree)", hclustfun = clustfun, 
             trace = "none", scale = "none", col = c("white", rev(heat.colors(max(x[isTerm, ]) + 
-                2))), margins = plotMargins, key = T, sub = matrPath, srtCol = 40, keysize = 1)
+                2))), margins = plotMargins, key = T, srtCol = 40, keysize = 1)
         
         heatmap.2((x[!isTerm, ] > 0) * 1, main = "Steiner Nodes across Networks", hclustfun = clustfun, 
             trace = "none", scale = "none", col = c("white", "black"), margins = plotMargins, 
-            key = F, sub = matrPath, srtCol = 40)
+            key = F, srtCol = 40)
         heatmap.2(x[!isTerm, ], main = "Steiner Nodes across Networks (color is degree)", hclustfun = clustfun, 
             trace = "none", scale = "none", col = c("white", rev(heat.colors(max(x[!isTerm, ]) + 
-                2))), margins = plotMargins, key = T, sub = matrPath, srtCol = 40, keysize = 1)
+                2))), margins = plotMargins, key = T, srtCol = 40, keysize = 1)
     } else {
         # secret subgroup-coloring option!
         cols <- sapply(colnames(x), function(name) {
@@ -94,35 +94,35 @@ if (length(params) >= 1) {
         })
         heatmap.2((x > 0) * 1, main = "All Nodes across Networks", ColSideColors = cols, hclustfun = clustfun, 
             RowSideColors = rsColors, trace = "none", scale = "none", col = c("white", "black"), 
-            margins = plotMargins, key = F, sub = matrPath, srtCol = 40, keysize = 0.9)
+            margins = plotMargins, key = F, srtCol = 40, keysize = 0.9)
         legend("topright", legend = c(rownames(colors), "", "Steiner Node", "Terminal Node"), 
             col = c(colors$Color, "white", "hotpink", "gray"), lty = 1, lwd = 10, cex = 0.8)
         heatmap.2(x, main = "All Nodes across Networks (color is degree)", ColSideColors = cols, 
             hclustfun = clustfun, RowSideColors = rsColors, trace = "none", scale = "none", col = c("white", 
-                rev(heat.colors(max(x) + 2))), margins = plotMargins, key = T, sub = matrPath, 
+                rev(heat.colors(max(x) + 2))), margins = plotMargins, key = T, 
             srtCol = 40, keysize = 0.9)
         legend("topright", legend = c(rownames(colors), "", "Steiner Node", "Terminal Node"), 
             col = c(colors$Color, "white", "hotpink", "gray"), lty = 1, lwd = 10, cex = 0.8)
         
         heatmap.2((x[isTerm, ] > 0) * 1, main = "Terminal Nodes across Networks", ColSideColors = cols, 
             hclustfun = clustfun, trace = "none", scale = "none", col = c("white", "black"), 
-            margins = plotMargins, key = F, sub = matrPath, srtCol = 40, keysize = 0.9)
+            margins = plotMargins, key = F, srtCol = 40, keysize = 0.9)
         legend("topright", legend = rownames(colors), col = colors$Color, lty = 1, lwd = 10, 
             cex = 0.8)
         heatmap.2(x[isTerm, ], main = "Terminal Nodes across Networks (color is degree)", ColSideColors = cols, 
             hclustfun = clustfun, trace = "none", scale = "none", col = c("white", rev(heat.colors(max(x[isTerm, 
-                ]) + 2))), margins = plotMargins, key = T, sub = matrPath, srtCol = 40, keysize = 1)
+                ]) + 2))), margins = plotMargins, key = T, srtCol = 40, keysize = 1)
         legend("topright", legend = rownames(colors), col = colors$Color, lty = 1, lwd = 10, 
             cex = 0.8)
         
         heatmap.2((x[!isTerm, ] > 0) * 1, main = "Steiner Nodes across Networks", ColSideColors = cols, 
             hclustfun = clustfun, trace = "none", scale = "none", col = c("white", "black"), 
-            margins = plotMargins, key = F, sub = matrPath, srtCol = 40, keysize = 0.9)
+            margins = plotMargins, key = F, srtCol = 40, keysize = 0.9)
         legend("topright", legend = rownames(colors), col = colors$Color, lty = 1, lwd = 10, 
             cex = 0.8)
         heatmap.2(x[!isTerm, ], main = "Steiner Nodes across Networks (color is degree)", ColSideColors = cols, 
             hclustfun = clustfun, trace = "none", scale = "none", col = c("white", rev(heat.colors(max(x[!isTerm, 
-                ]) + 2))), margins = plotMargins, key = T, sub = matrPath, srtCol = 40, keysize = 0.9)
+                ]) + 2))), margins = plotMargins, key = T, srtCol = 40, keysize = 0.9)
         legend("topright", legend = rownames(colors), col = colors$Color, lty = 1, lwd = 10, 
             cex = 0.8)
         
