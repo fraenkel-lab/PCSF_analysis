@@ -2,15 +2,9 @@ msgPath:        /nfs/apps/bin/msgsteiner9
 pythPath:       /nfs/apps/python2.7/bin/python
 forestPath:     /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/bin/forest.py
 
-<<<<<<< HEAD
-projectPath:    /nfs/latdata/iamjli/alex/results/human_binned_weights2/
-terminals:      /nfs/latdata/iamjli/alex/data/toxicity_screen_human_prizes.tsv
-interactome:    /nfs/latdata/iamjli/alex/data/interactome/iRefIndex_v13_MIScore_interactome.txt
-=======
 projectPath:    /nfs/latdata/iamjli/alexanders_disease/results/human_uniform_weights/
 terminals:      /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/toxicity_screen_human_uniform_prizes.tsv
 interactome:    /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/iRefIndex_v13_MIScore_interactome.txt
->>>>>>> 34374ed0e46d0681c57e24b2d77ff3e15bbb71ee
 
 # Parameter grid
 w:      1,3,5
