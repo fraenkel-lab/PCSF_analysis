@@ -38,4 +38,4 @@ This also restructures the project directory. Results found in `param_search/sum
     
 Finally, summarize randomization results:  
 
-    Rscript summarize_randomizations.R <project_path>
+    Rscript summarize_randomizations.R
