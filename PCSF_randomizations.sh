@@ -22,7 +22,7 @@ label=$7
 param=$8
 paramLabel=$9
 
-numSamples=10
+numSamples=50
 
 for i in `seq 1 $numSamples`;
 do 

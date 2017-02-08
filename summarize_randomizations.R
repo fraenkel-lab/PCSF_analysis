@@ -11,7 +11,7 @@ library("yaml")
 
 # load project path
 x<-yaml.load_file("specification_sheet.yaml")
-TF<-x["projectPath"]
+TF<-as.character(x["projectPath"])
 
 
 ######################

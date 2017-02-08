@@ -43,7 +43,9 @@ for params in $pfs
 do
 	ps=$(basename $params .params)
 	resultpath=$resultbase/$ps
-	qsub $resultpath/${label}_${ps}_python.script
-	# qsub -q oldhosts.q $resultpath/${label}_${ps}_python.script
+	
+	# Careful with submitting to working hosts
+	# qsub -e $resultpath $resultpath/${label}_${ps}_python.script 
+	qsub -q oldhosts.q $resultpath/${label}_${ps}_python.script
 done
 
