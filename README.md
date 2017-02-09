@@ -38,4 +38,6 @@ This also restructures the project directory. Results found in `param_search/sum
     
 Finally, summarize randomization results:  
 
-    Rscript summarize_randomizations.R
+    python randomizations2subnetworks.py
+
+This script also performs community clustering (Louvain), finds GO terms for subclusters, and create output files for visualization in Cytpscape. 
