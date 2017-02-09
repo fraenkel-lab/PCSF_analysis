@@ -28,7 +28,7 @@ do
 	resultpath=$resultbase/$ps
 	mkdir -p $resultpath
 
-	COMMAND="$pyth $forest -p $terminals -e $interactome -c $resultbase/params/$params --msgpath=$msgpath --outpath=$resultpath --outlabel=${label}_$ps"
+	COMMAND="$pyth $forest -p $terminals -e $interactome -c $resultbase/params/$params --msgpath=$msgpath --outpath=$resultpath --outlabel=${label}_$ps --musquared"
 	CMD="/home/asoltis/wqsub.py --wqsub-name=$resultpath/${label}_$ps $COMMAND --wqsub-no-submit"
 	id=`$CMD`
 	jobids="$id $jobids"
