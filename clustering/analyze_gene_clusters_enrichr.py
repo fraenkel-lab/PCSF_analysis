@@ -24,7 +24,7 @@ from argparse import ArgumentParser
 def get_enrichment(filename):
     print 'The file for clustering is ' + filename
     outputDir=os.path.dirname(filename)
-    df = pd.read_table(filename,header=None)
+    df = pd.read_table(filename,header=None,usecols=[0,1])
     df.columns=['cluster_number','genes']
     df_colNames=list(df.columns.values)
     clusters = df.ix[:,0].values

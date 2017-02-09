@@ -24,6 +24,6 @@ def main():
 
 	# Run clustering algorithm (Louvian)
 	print "Running clustering algorithm..."
-	os.system("python clustering/louvain_clustering.py "+paths["project"])
+	os.system("python clustering/louvain_clustering.py %s %s" %(paths["project"], paths["terminals"]))
 
 main()
