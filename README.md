@@ -44,5 +44,5 @@ This script also performs community clustering (Louvain), finds GO terms for sub
 
 
 TODO: 
--script that fetches GO terms needs to handle empty responses
--restructure randomization->summary steps so that more than one randomization can be run
+ - script that fetches GO terms needs to handle empty responses
+ - restructure randomization->summary steps so that more than one randomization can be run
