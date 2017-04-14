@@ -46,6 +46,11 @@ def load_paths(yaml_path="../specification_sheet.yaml"):
 	paths["terminals"] = data["terminals"] 
 	paths["interactome"] = data["interactome"] 
 	paths["msg"] = data["msgPath"]
+	if "garnet" in data:
+		paths["garnet"] = data["garnet"]
+	else:
+		paths["garnet"] = "blank_file.tsv"
+		print "No garnet file indicated."
 	print "Paths loaded..."
 	for path in paths:
 		print "\t%s:\t%s" %(path, paths[path])

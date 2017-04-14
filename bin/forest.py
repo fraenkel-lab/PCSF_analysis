@@ -1344,7 +1344,7 @@ def main():
     (edgeList, info) = inputObj.runPCSF(options.msgpath, options.seed)
     outputObj = PCSFOutput(inputObj,edgeList,info,options.outputpath,options.outputlabel,1)
     outputObj.writeCytoFiles(options.outputpath, options.outputlabel, options.cyto30)
-    
+    print "XXX"
     #Get merged results of adding noise to edge values
     if options.noiseNum > 0:
         merged = changeValuesAndMergeResults(noiseEdges, options.seed, inputObj, 
@@ -1352,7 +1352,7 @@ def main():
                                              options.outputpath, options.outputlabel,
                                              options.excludeT)
         merged.writeCytoFiles(options.outputpath, options.outputlabel+'_noisy', options.cyto30)
-    
+    print "XXXX"
     #Get merged results of shuffling prizes
     if options.shuffleNum > 0:
         merged = changeValuesAndMergeResults(shufflePrizes, options.seed, inputObj, 
@@ -1360,7 +1360,7 @@ def main():
                                              options.outputpath, options.outputlabel,
                                              options.excludeT)
         merged.writeCytoFiles(options.outputpath, options.outputlabel+'_shuffled', options.cyto30)
-
+    print "XXXXX"
     #Get merged results of randomizing terminals
     if options.termNum > 0:
         merged = changeValuesAndMergeResults(randomTerminals,options.seed, inputObj,

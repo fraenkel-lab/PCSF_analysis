@@ -1,4 +1,3 @@
-
 # NAME
 #	PCSF_param_sweep.sh
 # 
@@ -19,6 +18,7 @@ interactome=$4
 resultbase=$5
 msgpath=$6
 label=$7
+garnet=$8
 
 
 pfs=`ls $resultbase/params/`
@@ -28,7 +28,7 @@ do
 	resultpath=$resultbase/$ps
 	mkdir -p $resultpath
 
-	COMMAND="$pyth $forest -p $terminals -e $interactome -c $resultbase/params/$params --msgpath=$msgpath --outpath=$resultpath --outlabel=${label}_$ps --musquared"
+	COMMAND="$pyth $forest -p $terminals -e $interactome -c $resultbase/params/$params --msgpath=$msgpath --outpath=$resultpath --outlabel=${label}_$ps --garnet=$garnet --musquared"
 	CMD="/home/asoltis/wqsub.py --wqsub-name=$resultpath/${label}_$ps $COMMAND --wqsub-no-submit"
 	id=`$CMD`
 	jobids="$id $jobids"
@@ -45,7 +45,8 @@ do
 	resultpath=$resultbase/$ps
 	
 	# Careful with submitting to working hosts
-	# qsub -e $resultpath $resultpath/${label}_${ps}_python.script 
-	qsub -q oldhosts.q $resultpath/${label}_${ps}_python.script
+	# qsub -q test.q $resultpath/${label}_${ps}_python.script
+	# qsub -q oldhosts.q $resultpath/${label}_${ps}_python.script
+	qsub $resultpath/${label}_${ps}_python.script
 done
 

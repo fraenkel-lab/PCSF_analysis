@@ -32,8 +32,8 @@ def main():
 	print paths["params"]
 
         print "Passing to PCSF_randomizations.sh..."
-        CMD = "sh bin/PCSF_randomizations.sh %s %s %s %s %s %s %s %s %s" %(paths["python"], paths["forest"], paths["terminals"], \
-                        paths["interactome"], paths["project"], paths["msg"], paths["label"], paths["params"], param_label)
+        CMD = "sh bin/PCSF_randomizations.sh %s %s %s %s %s %s %s %s %s %s" %(paths["python"], paths["forest"], paths["terminals"], \
+                        paths["interactome"], paths["project"], paths["msg"], paths["label"], paths["params"], param_label, paths["garnet"])
         os.system(CMD)
 	
 
