@@ -10,17 +10,17 @@
 ```yaml
 msgPath:        /nfs/apps/bin/msgsteiner9
 pythPath:       /nfs/apps/python2.7/bin/python
-forestPath:     /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/bin/forest.py
+forestPath:     /nfs/latdata/iamjli/alex/PCSF_analysis/bin/forest.py
 
-projectPath:    /nfs/latdata/iamjli/alexanders_disease/results/human_uniform_weights/
-terminals:      /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/toxicity_screen_human_uniform_prizes.tsv
-interactome:    /nfs/latdata/iamjli/alexanders_disease/PCSF_analysis/test_data/iRefIndex_v13_MIScore_interactome.txt
+projectPath:    /nfs/latdata/iamjli/alex/results/human_binned_weights/
+terminals:      /nfs/latdata/iamjli/alex/data/toxicity_screen_human_prizes.tsv
+interactome:    /nfs/latdata/iamjli/alex/data/interactome/iRefIndex_v13_MIScore_interactome.txt
 
 # Parameter grid
-w:      1,2,3
-beta:   1,2,3,4,5,6,7,8,9,10
-D:      7
-mu:     1e-05
+w:      1,2,3,4
+beta:   3,6,9,12
+D:      8
+mu:     3e-04,1e-03,3e-03,1e-02,3e-02
 ```
 
 ## Pipeline
@@ -38,4 +38,11 @@ This also restructures the project directory. Results found in `param_search/sum
     
 Finally, summarize randomization results:  
 
-    Rscript summarize_randomizations.R
+    python randomizations2subnetworks.py
+
+This script also performs community clustering (Louvain), finds GO terms for subclusters, and create output files for visualization in Cytpscape. 
+
+
+TODO: 
+ - script that fetches GO terms needs to handle empty responses
+ - restructure randomization->summary steps so that more than one randomization can be run
