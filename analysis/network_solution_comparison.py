@@ -2,7 +2,8 @@
 import sys, os
 import pandas as pd
 import fnmatch
-# import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
 import pickle as pkl
 
 
@@ -42,6 +43,7 @@ def main():
 	df = pd.concat(dfs)
 
 	df.to_csv("raw.csv")
+	df = df[df["robustness"] >= 0.9]
 
 	df.drop_duplicates(["protein", "experiment"], inplace=True)
 
@@ -59,7 +61,7 @@ def main():
 	# 	pkl.dump(data, f)
 
 
-	# g = sns.clustermap(data)
-	# g.savefig("test.png")
+	g = sns.clustermap(data)
+	g.savefig("test.png")
 
 main()

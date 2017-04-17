@@ -2,18 +2,18 @@ msgPath:        /nfs/apps/bin/msgsteiner9
 pythPath:       /nfs/apps/python2.7/bin/python
 forestPath:     /nfs/latdata/renan/OmicsIntegrator/bin/scripts/forest.py
 
-projectPath:    /nfs/latdata/iamjli/ALS/iMNs_ALS_CTR_results/renan_analysis_OG/
-terminals:      /nfs/latdata/renan/ALS/results/omics_integrator_iMNs_ALS_CTR_from_iMPs/output/proteomics/prizes_ALS_CTR_matched_interactome.tsv
-garnet: /nfs/latdata/renan/ALS/data/garnet_data/results_iMNs_ALS_CTR_galaxy/events_to_genes_with_motifsregression_results_FOREST_INPUT.tsv
+projectPath:    /nfs/latdata/iamjli/ALS/iMNs_ALS_CTR_results/renan_new_proteins_and_terminals/
+terminals:      /nfs/latdata/iamjli/ALS/data/iMNs/proteomics/20170323_ALS_CTR_iMNs_protein_log2FC0.5_FDR0.01.tsv
+garnet: /nfs/latdata/iamjli/ALS/data/iMNs/garnet_TFs/TFs_iMNs_ALS_CTR_2k_threshed.tsv
 interactome:    /nfs/latdata/iamjli/ALS/data/interactome/iRefIndex_v13_MIScore_interactome.txt
 
 #mrameter grid
-# w:  1,2,3,4
-# beta: 3,6,9,12
-# D:  8
-# mu: 0,5e-05,3e-04,1e-03,3e-03,1e-02
+w:  1,2,3,4
+beta: 3,6,9,12
+D:  8
+mu: 0,5e-05,3e-04,1e-03,3e-03,1e-02
 
-w:  0.5,1.5,2.5,3.5
-beta: 1,2,3,4,5,6,7,8,9,10,11,12
-D:  7
-mu: 5e-05
+# w:  0.5,1.5,2.5,3.5
+# beta: 1,2,3,4,5,6,7,8,9,10,11,12
+# D:  7
+# mu: 5e-05

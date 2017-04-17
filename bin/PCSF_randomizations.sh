@@ -21,6 +21,7 @@ msgpath=$6
 label=$7
 param=$8
 paramLabel=$9
+garnet=$10
 
 numSamples=25
 
@@ -32,13 +33,13 @@ do
 	echo $newDirectory
 	mkdir -p $newDirectory
 	
-	COMMAND="$pyth $forest -p $terminals -e $interactome -c $param/${paramLabel}.params --msgpath=$msgpath --outpath=$newDirectory --outlabel=$postLabel --musquared --noisyEdges 2"
+	COMMAND="$pyth $forest -p $terminals -e $interactome -c $param/${paramLabel}.params --msgpath=$msgpath --outpath=$newDirectory --outlabel=$postLabel --garnet=$garnet --musquared --noisyEdges 2"
 	CMD="/home/asoltis/wqsub.py --wqsub-name=$newDirectory/$postLabel $COMMAND --wqsub-no-submit"
 
 	# Create scripts for node randomization
 	newDirectory2=$resultbase'/'$paramLabel'/terminal_results/randomization_terminals_'$i
 	mkdir -p $newDirectory2
-	COMMAND2="$pyth $forest -p $terminals -e $interactome -c $param/${paramLabel}.params --msgpath=$msgpath --outpath=$newDirectory2 --outlabel=$postLabel --musquared --randomTerminals 2"
+	COMMAND2="$pyth $forest -p $terminals -e $interactome -c $param/${paramLabel}.params --msgpath=$msgpath --outpath=$newDirectory2 --outlabel=$postLabel --garnet=$garnet --musquared --randomTerminals 2"
 	CMD2="/home/asoltis/wqsub.py --wqsub-name=$newDirectory2/$postLabel $COMMAND2 --wqsub-no-submit"
 
 	id=`$CMD`
