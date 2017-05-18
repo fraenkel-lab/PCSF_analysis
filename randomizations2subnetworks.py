@@ -24,7 +24,7 @@ def main():
 			CMD = "python bin/summarize_nodes.py %s %s %s" %(path, paths["terminals"], paths["garnet"])
 			print CMD
 			os.system("python bin/summarize_nodes.py %s %s %s" %(path, paths["terminals"], paths["garnet"]))
-			th = 0.9 # robustness threshold
+			th = 0.95 # robustness threshold
 			os.system("python clustering/generate_output_network_file.py %s %s %s" %(path, paths["interactome"], str(th)))
 
 			# Run clustering algorithm (Louvian)
